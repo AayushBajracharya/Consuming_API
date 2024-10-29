@@ -1,0 +1,27 @@
+﻿@model ClientSite.Models.LoginViewModel
+ 
+<form asp-action="Login" method="post" style="max-width: 400px; margin: auto; background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+<h2 class="text-center" style="margin-bottom: 20px;">Login</h2>
+ 
+    <div class="form-group">
+<label asp-for="Username" class="control-label" style="font-weight: bold;"></label>
+<input asp-for="Username" class="form-control" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px;" />
+<span asp-validation-for="Username" class="text-danger"></span>
+</div>
+ 
+    <div class="form-group">
+<label asp-for="Password" class="control-label" style="font-weight: bold;"></label>
+<input asp-for="Password" type="password" class="form-control" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px;" />
+<span asp-validation-for="Password" class="text-danger"></span>
+</div>
+ 
+    <button type="submit" class="btn btn-primary btn-block" style="background-color: #007bff; padding: 10px; border-radius: 5px; font-size: 16px; transition: background-color 0.3s;">
+        Login
+</button>
+</form>
+ 
+<style>
+    form button:hover {
+        background-color: #0056b3;
+    }
+</style>
